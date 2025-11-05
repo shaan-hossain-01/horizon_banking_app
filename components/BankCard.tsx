@@ -12,7 +12,7 @@ const BankCard = ({ account, userName, showBalance = true }: CreditCardProps) =>
               {account.name || userName}
             </h1>
             <p className="font-family-ibm-plex-serif font-black text-white">
-              {formatAmount(account.currentBalance)}
+              {showBalance ? formatAmount(account.currentBalance) : '••••'}
             </p>
           </div>
           <article className="flex flex-col gap-2 ">
